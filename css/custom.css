@@ -1,0 +1,75 @@
+/*
+SPA Challenge Marvel
+Client: Grability
+Developper: Carlos Rojas @Guarrod
+*/
+
+
+/*General styles*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*Header*/
+
+header {
+    background-color: #2d2727;
+    color: #fff;
+    padding: 10px;
+}
+
+header img {
+    max-width: 150px;
+}
+
+input[type="search"] {
+    height: 50px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    padding: 0px 16px;
+    background-color: #fafafa;
+}
+
+input[type="submit"]{
+  background-image: url(../img/search.png);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  float: right;
+  position: relative;
+  top: -45px;
+  left: -5px;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #2d2727;
+    color: #fff;
+    padding: 40px;
+}
+
+section {
+    background-color: #f4f4f4;
+}
+
+
+/*Body*/
+
+.characters-container {}
+
+.character-box .box {
+    background-color: #fff;
+}
+
+.sidebar {
+    background-color: #ebebeb;
+}
