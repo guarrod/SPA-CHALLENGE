@@ -14,7 +14,7 @@ body {
 }
 
 
-/*Header*/
+/*-------------------------------------- Header -------------------------------------------*/
 
 header {
     background-color: #2d2727;
@@ -62,7 +62,7 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-/*Body*/
+/*-------------------------------------- Body -------------------------------------------*/
 
 h1.characters {
     background-image: url(../img/characters.png);
@@ -83,6 +83,8 @@ section select{
   background-color: #fafafa;
       margin: 30px 0px;
 }
+
+/*-------------------------------------- Characters -------------------------------------------*/
 
 
 .characters-container {
@@ -117,7 +119,9 @@ left: -18px;
 
 .character-box .box p{
   color: #8e8a8a;
-      margin: 12px 0px 23px 0px;
+      margin: 18px 0px 33px 0px;
+      font-weight: 300;
+      padding-right: 20px;
 }
 
 .character-box .box a.more{
@@ -150,6 +154,10 @@ padding-bottom: 20px;
       margin-bottom: 10px;
 }
 
+
+/*-------------------------------------- Pagination -------------------------------------------*/
+
+
 .pagination{
       margin-bottom: 40px;
 }
@@ -179,6 +187,9 @@ text-decoration: none;
   color: #3d3332;
 }
 
+
+/*-------------------------------------- Favourites -------------------------------------------*/
+
 .sidebar {
     background-color: #ebebeb;
 }
@@ -189,6 +200,7 @@ h1.favourites {
     padding-left: 55px;
     line-height: 43px;
     font-size: 30px;
+          margin-bottom: 4px;
 }
 
 .favourites-container{
@@ -196,29 +208,41 @@ padding: 0px 23px;
 }
 
 .favourites-container .box{
-text-align: center;
+text-align: right;
+max-width: 216px;
+    display: inline-block;
 }
 
 .favourites-container .box a{
   background-image: url(../img/btn-delete.png);
+  background-repeat: no-repeat;
   width: 35px;
   height: 35px;
-  display: block;
+  display: table;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px rgba(255, 255, 255, 0) solid;
   position: relative;
-  right: -226px;
-  top: 20px;
+    bottom: -27px;
+    right: -16px;
+}
+
+.favourites-container .box a:hover{
+  border: 2px #fff solid;
 }
 
 .favourites-container .box img{
-
+    max-width: 100%;
 }
 
 .favourites-container .box h1{
-
+  margin-top: 10px;
+  font-size: 19px;
+text-align: left;
 }
 
 
-/*Modal*/
+/*-------------------------------------- Modal -------------------------------------------*/
 
 a.close{
 background-image: url("../img/btn-close.png");
@@ -236,8 +260,45 @@ color:#3d3332;
 text-decoration: none;
 width: 100%;
 display: block;
-padding: 17px 0px;
+    font-weight: 700;
+padding: 17px 0px 28px 0px;
 }
+
+a.add:hover{
+  background-color: #cacaca;
+}
+
+a.add span{
+  background-image: url("../img/btn-favourites-default.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+      margin-bottom: -16px;
+      margin-right: 7px;
+}
+
+
+a.added{
+background-color: #322827;
+color:#ec1d23;
+text-decoration: none;
+width: 100%;
+display: block;
+    font-weight: 700;
+padding: 17px 0px 28px 0px;
+}
+
+a.added span{
+  background-image: url("../img/btn-favourites-primary.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+      margin-bottom: -16px;
+      margin-right: 7px;
+}
+
 
 a.buy{
 background-color: #dcdcdc;
@@ -245,10 +306,25 @@ color:#ec1d23;
 text-decoration: none;
 width: 100%;
 display: block;
-padding: 17px 0px;
+font-weight: 700;
+padding: 17px 0px 28px 0px;
 }
 
-.remodal .row .left, .remodal .row .right{
+a.buy:hover{
+  background-color: #cacaca;
+}
+
+a.buy span{
+  background-image: url("../img/shopping-cart-primary.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+      margin-bottom: -16px;
+      margin-right: 7px;
+}
+
+.remodal .info .left, .remodal .info .right{
       padding: 45px;
 }
 
@@ -263,15 +339,17 @@ margin-top: -4px;
     font-weight: 300;
 }
 
-.remodal .row.options .left{
-  padding-right: 0px;
+.remodal .options div:nth-child(1){
+  padding-right: 0px
 }
 
-.remodal .row.options .right{
-  padding-left: 0px;
+.remodal .options div:nth-child(2){
+  padding-left: 0px
 }
 
-/*Footer*/
+
+
+/*-------------------------------------- Footer -------------------------------------------*/
 
 footer {
     background-color: #2d2727;
@@ -281,4 +359,202 @@ footer {
 
 section {
     background-color: #f4f4f4;
+}
+
+
+/*-------------------------------------- Responsive -------------------------------------------*/
+
+.sm-indicator, .md-indicator, .lg-indicator{
+  display: none;
+  position: absolute;
+  background-color: white;
+  right: 0px;
+  margin: 0px;
+  padding: 10px;
+}
+
+.xs-indicator{
+  display: block;
+  position: absolute;
+  background-color: white;
+  right: 0px;
+  margin: 0px;
+  padding: 10px;
+}
+
+
+/*SM*/
+@media only screen and (min-width: 48em){
+
+.xs-indicator, .md-indicator, .lg-indicator{
+  display: none;
+}
+
+.sm-indicator{
+  display: block;
+}
+
+.character-box .box p {
+    padding-right: 20px;
+}
+
+h1.characters {
+    font-size: 24px;
+}
+
+h1.favourites {
+    font-size: 24px;
+}
+
+}
+
+/*MD*/
+@media only screen and (min-width: 64em) {
+
+  .xs-indicator, .sm-indicator, .lg-indicator{
+    display: none;
+  }
+
+  .md-indicator{
+    display: block;
+  }
+
+  h1.characters {
+      font-size: 27px;
+  }
+
+  h1.favourites {
+      font-size: 27px;
+  }
+
+  .character-box .box img {
+      max-width: 116%;
+      margin: auto;
+      display: block;
+      left: 0px;
+  }
+
+  .character-box .box h1 {
+    color: #473d3e;
+    margin-top: -5px;
+    font-size: 25px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.character-box .box p {
+    padding: 0px 20px;
+        margin: 18px 0px 20px 0px;
+}
+
+.character-box .box a.more {
+    background-color: #ec1d23;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: auto;
+    display: table;
+        margin-bottom: 15px;
+}
+
+
+
+}
+
+/*LG*/
+@media only screen and (min-width: 75em){
+
+  .xs-indicator, .sm-indicator, .md-indicator{
+    display: none;
+  }
+
+  .lg-indicator{
+    display: block;
+  }
+
+
+  /*-------------------------------------- Characters -------------------------------------------*/
+
+  .character-box .box h1 {
+    color: #473d3e;
+    margin-top: -14px;
+    font-size: 25px;
+    margin-bottom: 6px;
+    text-align: left;
+        padding: 0px 20px;
+}
+
+.character-box .box a.more {
+    background-color: #ec1d23;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: auto;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+
+
+
+
+.characters-container {
+    padding: 0px 0px 0px 30px;
+}
+
+.character-box{
+    margin-bottom: 25px;
+}
+
+.character-box .box {
+    background-color: #fff;
+        max-width: 96%;
+}
+
+.character-box .box img{
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+-moz-box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+position: relative;
+top: -20px;
+left: -18px;
+}
+
+
+.character-box .box p{
+  color: #8e8a8a;
+      margin: 18px 0px 33px 0px;
+      font-weight: 300;
+      padding-right: 20px;
+}
+
+
+
+.character-box .box h2{
+  color: #786e6d;
+  font-size: 19px;
+  padding-left: 20px;
+  margin-top: 0px;
+}
+
+.character-box .box ul{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+      list-style: none;
+      padding-left: 20px;
+padding-bottom: 20px;
+  color: #8e8a8a;
+}
+
+.character-box .box ul li{
+      margin-bottom: 10px;
+}
+
 }
