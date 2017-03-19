@@ -34,20 +34,242 @@ input[type="search"] {
     border: none;
     padding: 0px 16px;
     background-color: #fafafa;
+    margin-top: 10px;
 }
 
-input[type="submit"]{
-  background-image: url(../img/search.png);
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
+input[type="submit"] {
+    background-image: url(../img/search.png);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    float: right;
+    position: relative;
+    top: -45px;
+    left: -5px;
+    margin-bottom: -30px;
+}
+
+input[type="submit"]::after {
+    clear: both;
+}
+
+input[type="search"]:focus {
+    color: #a9a9a9;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/*Body*/
+
+h1.characters {
+    background-image: url(../img/characters.png);
+    background-repeat: no-repeat;
+    padding-left: 45px;
+    line-height: 43px;
+    font-size: 30px;
+        margin: 30px 0px;
+}
+
+section select{
+  height: 50px;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 2px;
   border: none;
-  float: right;
-  position: relative;
-  top: -45px;
-  left: -5px;
+  padding: 0px 16px;
+  background-color: #fafafa;
+      margin: 30px 0px;
 }
 
+
+.characters-container {
+    padding: 0px 0px 0px 30px;
+}
+
+.character-box{
+    margin-bottom: 25px;
+}
+
+.character-box .box {
+    background-color: #fff;
+        max-width: 96%;
+}
+
+.character-box .box img{
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+-moz-box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+box-shadow: 10px 9px 22px -7px rgba(0,0,0,0.22);
+position: relative;
+top: -20px;
+left: -18px;
+}
+
+.character-box .box h1{
+  color: #473d3e;
+      margin-top: -14px;
+          font-size: 25px;
+          margin-bottom: 6px;
+}
+
+.character-box .box p{
+  color: #8e8a8a;
+      margin: 12px 0px 23px 0px;
+}
+
+.character-box .box a.more{
+  background-color: #ec1d23;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+font-size: 15px;
+font-weight: 600;
+}
+
+.character-box .box h2{
+  color: #786e6d;
+  font-size: 19px;
+  padding-left: 20px;
+  margin-top: 0px;
+}
+
+.character-box .box ul{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+      list-style: none;
+      padding-left: 20px;
+padding-bottom: 20px;
+  color: #8e8a8a;
+}
+
+.character-box .box ul li{
+      margin-bottom: 10px;
+}
+
+.pagination{
+      margin-bottom: 40px;
+}
+
+.pagination ul{
+
+}
+
+.pagination ul li{
+  display: inline-block;
+
+background-color: #fff;
+text-align: center;
+-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+}
+
+.pagination ul li a{
+  color: #c5c1c2;
+text-decoration: none;
+    line-height: 50px;
+        padding: 21px;
+}
+
+.pagination ul li a.active{
+  color: #3d3332;
+}
+
+.sidebar {
+    background-color: #ebebeb;
+}
+
+h1.favourites {
+    background-image: url(../img/favourites.png);
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    line-height: 43px;
+    font-size: 30px;
+}
+
+.favourites-container{
+padding: 0px 23px;
+}
+
+.favourites-container .box{
+text-align: center;
+}
+
+.favourites-container .box a{
+  background-image: url(../img/btn-delete.png);
+  width: 35px;
+  height: 35px;
+  display: block;
+  position: relative;
+  right: -226px;
+  top: 20px;
+}
+
+.favourites-container .box img{
+
+}
+
+.favourites-container .box h1{
+
+}
+
+
+/*Modal*/
+
+a.close{
+background-image: url("../img/btn-close.png");
+width: 30px;
+height: 30px;
+display: block;
+position: absolute;
+    right: 14px;
+    top: 12px;
+}
+
+a.add{
+background-color: #f0f0f0;
+color:#3d3332;
+text-decoration: none;
+width: 100%;
+display: block;
+padding: 17px 0px;
+}
+
+a.buy{
+background-color: #dcdcdc;
+color:#ec1d23;
+text-decoration: none;
+width: 100%;
+display: block;
+padding: 17px 0px;
+}
+
+.remodal .row .left, .remodal .row .right{
+      padding: 45px;
+}
+
+.remodal h1{
+  FONT-SIZE: 26px;
+text-align: left;
+margin-top: -4px;
+}
+
+.remodal p{
+  text-align: left;
+    font-weight: 300;
+}
+
+.remodal .row.options .left{
+  padding-right: 0px;
+}
+
+.remodal .row.options .right{
+  padding-left: 0px;
+}
 
 /*Footer*/
 
@@ -59,17 +281,4 @@ footer {
 
 section {
     background-color: #f4f4f4;
-}
-
-
-/*Body*/
-
-.characters-container {}
-
-.character-box .box {
-    background-color: #fff;
-}
-
-.sidebar {
-    background-color: #ebebeb;
 }
