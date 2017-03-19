@@ -1,5 +1,4 @@
-# SPA-CHALLENGE
-SPA Challenge Marvel
+# SPA-CHALLENGE Marvel
 
 Desarrollado por Carlos Rojas
 
