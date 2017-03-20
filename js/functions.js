@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-   // Personajes ts-9
+   // Configuración de la consultar
+   // El hash utilizado se generó con http://www.md5.cz/
    $.ajax({
     url: "http://gateway.marvel.com/v1/public/characters?apikey=940b04bf692c6f5beca5ef9fa55efed3&ts=1&hash=cb38b960136f724ce9cdae36516cb36a&limit=10",
     method: "GET"
@@ -8,6 +9,7 @@ $(document).ready(function(){
 
       $("div.characters-container").empty();
 
+      //Loop para consultar el API y devolver la información del personaje
       $.each(response.data.results, function(index, element) {
 
          $("div.characters-container")
@@ -39,7 +41,7 @@ $(document).ready(function(){
                )
              )
          )
-
+        //Loop para devolver 4 comics relacionados al personaje
          $.each(element.comics.items, function(i, comic){
             if (i < 4){
                $("div.characters-container ul:last")
@@ -48,7 +50,8 @@ $(document).ready(function(){
                )
             }
          })
-        
+        //
+
 
       })
 
